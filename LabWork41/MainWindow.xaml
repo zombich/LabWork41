@@ -5,23 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabWork41"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Window.Triggers>
-        <EventTrigger SourceName="MenuButton" RoutedEvent="Button.Click">
-            <EventTrigger.Actions>
-                <BeginStoryboard >
-                    <Storyboard TargetProperty="Width" TargetName="MenuStackPanel">
-                        <DoubleAnimation From="20" To="100" x:Name="MenuDoubleAnimation"/>
-                    </Storyboard>
-                </BeginStoryboard>
-            </EventTrigger.Actions>
-        </EventTrigger>
-    </Window.Triggers>
-    <DockPanel>
-        <StackPanel x:Name="MenuStackPanel" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left">
-            <Button Content=" ☰ Меню" x:Name="MenuButton" Click="MenuButton_Click"/>
-            <Button Content="😂 Приколы"/>
-            <Button Content="🐷 Животные"/>
-        </StackPanel>
-    </DockPanel>
+        Title="MainWindow" Height="450" Width="800" FontSize="18">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button Click="Task1Button_Click">Task1</Button>
+        <Button Click="Task2Button_Click">Task2</Button>
+        <Button Click="Task3Button_Click">Task3</Button>
+        <Button Click="Task4Button_Click">Task4</Button>
+        <Button Click="Task5Button_Click">Task5</Button>
+    </StackPanel>
 </Window>

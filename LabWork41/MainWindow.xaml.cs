@@ -20,13 +20,45 @@ namespace LabWork41
         {
             InitializeComponent();
         }
-        public bool IsMenuOpened = false;
 
-        private void MenuButton_Click(object sender, RoutedEventArgs e)
+        private void Task1Button_Click(object sender, RoutedEventArgs e)
         {
-            IsMenuOpened = !IsMenuOpened;
-            MenuDoubleAnimation.From = IsMenuOpened ? 20 : 100;
-            MenuDoubleAnimation.To = IsMenuOpened ? 100 : 20;
+            Task1 task = new();
+            Hide();
+            task.ShowDialog();
+            Show();
+        }
+
+        private void Task2Button_Click(object sender, RoutedEventArgs e)
+        {
+            Task2 task = new();
+            Hide();
+            task.ShowDialog();
+            Show();
+        }
+
+        private void Task3Button_Click(object sender, RoutedEventArgs e)
+        {
+            Task3 task = new();
+            Hide();
+            task.ShowDialog();
+            Show();
+        }
+
+        private void Task4Button_Click(object sender, RoutedEventArgs e)
+        {
+            Task4 task = new();
+            Hide();
+            task.ShowDialog();
+            Show();
+        }
+
+        private void Task5Button_Click(object sender, RoutedEventArgs e)
+        {
+            Task5 task = new();
+            Hide();
+            task.ShowDialog();
+            Show();
         }
     }
 }
